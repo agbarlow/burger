@@ -1,0 +1,65 @@
+li {
+  padding: 5px;
+  margin: 5px;
+  background: #faebd7;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.create-update-form {
+  padding: 5px;
+  margin: 5px;
+  
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+
+h1 {
+font-weight:bold;
+color: #522d80;
+font-size: 60px;
+
+}
+
+h2 {
+color: gold;
+}
+
+#userinput{
+height: 50px;
+width: 300px;
+font-size: medium;
+
+}
+
+body {
+background-color: #f56600;
+text-align: center;
+}
+
+.burgerresults {
+column-count: 2;
+}
+
+.input {
+
+float: left;
+text-align: left;
+margin-left: 20%;
+
+}
+
+.crushed {
+margin-right: 20%;
+float: right;
+text-align:left;
+}
+
+ul {
+webkit-margin-before: 0em;
+padding-left: 0px;
+}

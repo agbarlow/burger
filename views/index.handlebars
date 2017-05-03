@@ -1,0 +1,76 @@
+
+<!-- Burger Time -->
+
+
+<img src="../assets/img/burgertime.jpg" alt="giant cheeseburger" style="width:304px;height:228px;">
+
+<h1>BURGER TIME!</h1>
+
+
+<!-- Submit a new burger -->
+
+<h3>Enter the burger you want us to make & press submit!</h3>
+
+
+<form class="create-update-form" action="/" method="POST">
+
+  <div class="form-group">
+    <label for="userinput"></label>
+    <input type="text" id="userinput" name="name">
+  </div>
+  <button type="submit">Submit</button>
+</form>
+
+
+<!-- List the burger still to be eaten -->
+
+
+<div class = "input"ß>
+<h3>Burgers to be eaten:</h3>
+
+
+
+<ul>
+  {{#each burgers}}
+    {{#unless this.devoured}}
+      <ul>
+       
+        <form action="/{{this.id}}?_method=PUT" method="POST">
+          <input type="hidden" name="devoured" value="true">
+         	{{this.id}}. 
+       		{{this.name}}     
+       		<button type="submit">DEVOUR!</button>
+        </form>      
+      </ul>
+    {{/unless}}
+  {{/each}}
+</ul>
+
+</div>
+
+<!-- Burgers that were devoured -->
+
+
+<div class = "crushed">
+
+<h3>Burgers that got crushed!</h3>
+
+<ul>
+  {{#each burgers}}
+    {{#if this.devoured}}
+      <ul>
+        {{this.id}}. 
+        {{this.name}}
+
+        <form action="/{{this.id}}?_method=PUT" method="POST">
+          <input type="hidden" name="devoured" value="false">
+        </form>
+
+    
+      </ul>
+    {{/if}}
+  {{/each}}
+</ul>
+
+
+
